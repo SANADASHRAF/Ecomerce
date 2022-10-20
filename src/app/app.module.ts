@@ -13,6 +13,7 @@ import { NavbarComponent } from './componants/navbar/navbar.component';
 import { AcountComponent } from './componants/acount/acount.component';
 import { GoodsComponent } from './componants/goods/goods.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { GoodsComponent } from './componants/goods/goods.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
