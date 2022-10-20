@@ -12,7 +12,7 @@ import { SignupComponent } from './componants/signup/signup.component';
 import { NavbarComponent } from './componants/navbar/navbar.component';
 import { AcountComponent } from './componants/acount/acount.component';
 import { GoodsComponent } from './componants/goods/goods.component';
-
+import { FormsModule } from '@angular/forms'; 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule   
+    NgbModule  ,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

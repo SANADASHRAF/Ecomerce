@@ -1,1 +1,44 @@
-<p>signup works!</p>
+<h1 class="h" > Sign UP</h1>
+<div class="formm">
+    
+    <form  #f="ngForm" (ngSubmit)="submit(f)">
+
+        
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name </label>
+            <input  ngModel name="name" #name="ngModel" type="text" class="form-control"  required> 
+            <div class="alert alert-danger" *ngIf="name.touched && name.errors?.['required']"> Name is required</div>
+          </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email </label>
+            <input ngModel name="email" #email="ngModel" type="email" class="form-control"  required email>
+            <div class="alert alert-danger" *ngIf="email.touched && email.errors?.['required']"> Email is required</div>
+            <div class="alert alert-danger" *ngIf="email.touched && email.errors?.['email']"> Not Valid Email</div>  
+          </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password </label>
+          <input ngModel name="password"  #password="ngModel"  type="password" class="form-control" required minlength="5" >
+          <div class="alert alert-danger" *ngIf="password.touched && password.errors?.['required']"> Password is required</div>
+          <div class="alert alert-danger" *ngIf="password.touched && password.errors?.['minlength']"> Password Must be more +5 CHAR</div> 
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+          <input ngModel name="confirmpassword" #confirmpassword="ngModel" type="password" class="form-control" required >
+          <div class="alert alert-danger" *ngIf="confirmpassword.touched && confirmpassword.errors?.['required']"> Confirmpassword is required</div>
+          <div class="alert alert-danger" *ngIf="confirmpassword.touched && confirmpassword.value != password.value "> Not Match</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Adress</label>
+            <input ngModel name="adress" #adress="ngModel" type="text" class="form-control" required>
+            <div class="alert alert-danger" *ngIf="adress.touched && adress.errors?.['required']"> Adress is required</div>
+          </div>
+        
+        <button  [disabled]="f.invalid" type="submit" class="btn btn-primary sub">Submit</button>
+      </form> 
+
+      <p class="p"> HAVE ACOUNT !! <a routerLink="login">LOGIN</a></p>
+</div>

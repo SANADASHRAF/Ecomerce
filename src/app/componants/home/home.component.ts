@@ -23,4 +23,7 @@ export class HomeComponent implements OnInit {
   }
 
   
+  Addtocart(index: any){
+  console.log("added",this.goods[index])
+  }
 }
