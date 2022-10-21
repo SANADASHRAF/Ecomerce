@@ -13,7 +13,7 @@ const routes: Routes = [
  {path:'signup',component:SignupComponent},
  {path:'cart',component:CartComponent},
  {path:'admin',component:GoodsComponent},
- {path:'**',component:NotFoundComponent}
+ {path:'**',redirectTo:'home',pathMatch:'full'}
 
 ];
 

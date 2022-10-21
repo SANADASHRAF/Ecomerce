@@ -9,11 +9,15 @@ import { OrdersComponent } from './componants/orders/orders.component';
 import { CartComponent } from './componants/cart/cart.component';
 import { NotFoundComponent } from './componants/not-found/not-found.component';
 import { SignupComponent } from './componants/signup/signup.component';
-import { NavbarComponent } from './componants/navbar/navbar.component';
+
 import { AcountComponent } from './componants/acount/acount.component';
 import { GoodsComponent } from './componants/goods/goods.component';
 import { FormsModule } from '@angular/forms'; 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NavbarComponent } from './componants/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ProductService } from './servisee/product.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +29,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     SignupComponent,
     NavbarComponent,
     AcountComponent,
-    GoodsComponent
+    GoodsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule  ,
-    FormsModule 
+    FormsModule ,
+    HttpClientModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
