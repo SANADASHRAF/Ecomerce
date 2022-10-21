@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   
       this.products = res      
      },
-     errpr=>{console.log(errpr.message)}
+     errpr=>{alert(errpr.massege)}
      )
   }
  
