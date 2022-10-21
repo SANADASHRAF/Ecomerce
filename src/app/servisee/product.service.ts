@@ -12,4 +12,13 @@ export class ProductService {
   getAllProducts() {
     return this.http.get(environment.baseAPI+'products');
   }
+
+
+  getAllCategory(){
+    return this.http.get(environment.baseAPI+'products/categories');
+  }
+
+  gitFilteredCategory(cat:string){
+    return this.http.get(environment.baseAPI+'products/category/'+cat);
+  }
 }
