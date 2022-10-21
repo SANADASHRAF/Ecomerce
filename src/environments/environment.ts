@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  //baseAPI
+  baseAPI:"https://fakestoreapi.com/",
   production: false
 };
 

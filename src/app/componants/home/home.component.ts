@@ -14,12 +14,16 @@ export class HomeComponent implements OnInit {
   constructor(private service:ProductService) { }
 
   ngOnInit(): void {
+    this.getProducts();
   }
 
   getProducts() {  
     this.service.getAllProducts().subscribe((res:any) => {
+  
       this.products = res      
-     })
+     },
+     errpr=>{console.log(errpr.message)}
+     )
   }
  
 }
