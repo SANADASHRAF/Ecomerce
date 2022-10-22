@@ -18,6 +18,7 @@ import { NavbarComponent } from './componants/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ProductService } from './servisee/product.service';
+import { SpinnerComponent } from './componants/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { ProductService } from './servisee/product.service';
     NavbarComponent,
     AcountComponent,
     GoodsComponent,
+    SpinnerComponent,
     
   ],
   imports: [

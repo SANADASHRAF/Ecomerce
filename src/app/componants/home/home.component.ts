@@ -8,7 +8,8 @@ import { ProductService } from 'src/app/servisee/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  
+    //sppener
+  loading:boolean=false;
 
   products:any[] = [];
   categories:any[]=[];
@@ -22,28 +23,31 @@ export class HomeComponent implements OnInit {
 
 // call serveses
 
-//allproduct 
+//call service of allproduct 
   getProducts() {  
-    this.service.getAllProducts().subscribe((res:any) => {
-  
-      this.products = res      
-     },
-     errpr=>{alert(errpr.massege)}
+    this.loading=true;
+
+    this.service.getAllProducts().subscribe(
+      (res:any) => { this.products = res;     this.loading=false;  },
+       errpr=>{alert(errpr.massege) ;this.loading=false}
      )
   }
 
 
  
-  // category 
+  //call service of category 
   getAllCategory(){
+    //sppener
+    this.loading=true;
+
       this.service.getAllCategory().subscribe(
-      (res:any)=>{ this.categories=res; }, 
-       error   =>{alert(error)}
+      (res:any)=>{ this.categories=res ; this.loading=false; }, 
+       error   =>{alert(error) ;this.loading=false}
        )}
 
   //method of change event of select category 
    selectcategory(event:any){
-    
+
         let selectcategory=event.target.value;
 
         if(selectcategory=="all")
@@ -56,11 +60,14 @@ export class HomeComponent implements OnInit {
         }
        }
 
+       
+  //call service of filter selected category
+      gitFilteredCategory(value:string){
+        this.loading=true;
 
-    gitFilteredCategory(value:string){
       this.service.gitFilteredCategory(value).subscribe(
-        (res:any)=>{this.products=res},
-         error    =>{alert(error)}
+        (res:any)=>{this.products=res  ;this.loading=false},
+         error    =>{alert(error)  ;this.loading=false}
       )
 
        }
