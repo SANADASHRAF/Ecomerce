@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ProductService } from './servisee/product.service';
 import { SpinnerComponent } from './componants/spinner/spinner.component';
+import { SelectlistComponent } from './componants/selectlist/selectlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +33,7 @@ import { SpinnerComponent } from './componants/spinner/spinner.component';
     AcountComponent,
     GoodsComponent,
     SpinnerComponent,
+    SelectlistComponent,
     
   ],
   imports: [
