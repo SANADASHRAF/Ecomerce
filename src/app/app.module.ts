@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './servisee/product.service';
 import { SpinnerComponent } from './componants/spinner/spinner.component';
 import { SelectlistComponent } from './componants/selectlist/selectlist.component';
+import { ProductComponent } from './componants/product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { SelectlistComponent } from './componants/selectlist/selectlist.componen
     GoodsComponent,
     SpinnerComponent,
     SelectlistComponent,
+    ProductComponent,
     
   ],
   imports: [
