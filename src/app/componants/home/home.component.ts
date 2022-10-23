@@ -79,25 +79,27 @@ export class HomeComponent implements OnInit {
    
 
        
-       // receive add to cart
+       // receive data and add to cart
        receiveaddtocart(event:any){
-        if("cart" in localStorage){
-        this.cartproducts=JSON.parse(localStorage.getItem("cart")!)
-        let exist=this.cartproducts.find(x=>x.id==event.id)
-         if(exist)
+        if("cart" in localStorage)
+        {
+            this.cartproducts=JSON.parse(localStorage.getItem("cart")!)
+            let exist=this.cartproducts.find(x=>x.item.id==event.item.id)
+            if(exist)
             {
-              alert("product is already exist in cart !!")
+                  alert("product is already exist in cart !!")
             }
-          else{
-              this.cartproducts.push(event);
-              localStorage.setItem("cart",JSON.stringify(this.cartproducts))
-        }
+            else
+            {
+                  this.cartproducts.push(event);
+                  localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+            }
         }
         else
         {
-          this.cartproducts.push(event);
-          localStorage.setItem("cart",JSON.stringify(this.cartproducts))
-        }
+              this.cartproducts.push(event);
+              localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+            }
        }
 
 
