@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Good } from 'src/app/interface/good.interface';
 import { ProductService } from 'src/app/servisee/product.service';
@@ -13,6 +14,10 @@ export class HomeComponent implements OnInit {
 
   products:any[] = [];
   categories:any[]=[];
+
+  //deal with local storage
+  cartproducts:any[]=[];
+
 
   constructor(private service:ProductService) { }
 
@@ -74,6 +79,26 @@ export class HomeComponent implements OnInit {
    
 
        
+       // receive add to cart
+       receiveaddtocart(event:any){
+        if("cart" in localStorage){
+        this.cartproducts=JSON.parse(localStorage.getItem("cart")!)
+        let exist=this.cartproducts.find(x=>x.id==event.id)
+         if(exist)
+            {
+              alert("product is already exist in cart !!")
+            }
+          else{
+              this.cartproducts.push(event);
+              localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+        }
+        }
+        else
+        {
+          this.cartproducts.push(event);
+          localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+        }
+       }
 
 
 
