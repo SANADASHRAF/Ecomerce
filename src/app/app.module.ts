@@ -21,6 +21,7 @@ import { ProductService } from './servisee/product.service';
 import { SpinnerComponent } from './componants/spinner/spinner.component';
 import { SelectlistComponent } from './componants/selectlist/selectlist.component';
 import { ProductComponent } from './componants/product/product.component';
+import { ProductDetailsComponent } from './componants/product-details/product-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { ProductComponent } from './componants/product/product.component';
     SpinnerComponent,
     SelectlistComponent,
     ProductComponent,
+    ProductDetailsComponent,
     
   ],
   imports: [
