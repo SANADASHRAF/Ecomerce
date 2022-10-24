@@ -5,6 +5,7 @@ import { GoodsComponent } from './componants/goods/goods.component';
 import { HomeComponent } from './componants/home/home.component';
 import { LoginComponent } from './componants/login/login.component';
 import { NotFoundComponent } from './componants/not-found/not-found.component';
+import { ProductDetailsComponent } from './componants/product-details/product-details.component';
 import { SignupComponent } from './componants/signup/signup.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
  {path:'signup',component:SignupComponent},
  {path:'cart',component:CartComponent},
  {path:'admin',component:GoodsComponent},
+ {path:'productdetail/:id',component:ProductDetailsComponent},
  {path:'**',redirectTo:'home',pathMatch:'full'}
 
 ];

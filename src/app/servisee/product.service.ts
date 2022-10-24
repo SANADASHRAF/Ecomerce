@@ -21,4 +21,8 @@ export class ProductService {
   gitFilteredCategory(cat:string){
     return this.http.get(environment.baseAPI+'products/category/'+cat);
   }
+
+  getproductbyid(id:any){
+    return this.http.get(environment.baseAPI +'products/'+id)
+  }
 }
