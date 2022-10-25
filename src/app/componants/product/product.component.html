@@ -1,6 +1,6 @@
 <div class="card">
 
-    <div class="view overlay">
+    <div class="view overlay" >
        <img class="card-img-top" [src]="data.image" alt="Card image cap">
        <a>
            <div class="mask rgba-white-slight"></div>
@@ -8,14 +8,15 @@
     </div>            
    <div class="card-body" >         
        <h4 class="card-title">{{data.title }}  </h4>
-       <span class="btn btn-secondary" > ${{data.price }} </span>
+       <span class="btn btn-danger" > ${{data.price }} </span>
+       <button class="btn btn-info " routerLink="productdetail/{{data.id}} " style="margin-left: 30px;">Details</button>
        <hr>        
        <p class="card-text p" >{{data.description}} .</p>
        <button class="btn btn-primary"  *ngIf="!clickadd" (click)="clickadd=true" >Add to Cart</button>
 
-       <div class="d-flex "  *ngIf="clickadd">
-        <input type="number" class="form-contrl"  [(ngModel)]="amount">
-        <button class="btn btn-danger" (click)="add()">Add</button>
+       <div class="d-flex w-50 "  *ngIf="clickadd" >
+        <input type="number" class="form-contrl"  [(ngModel)]="amount" >
+        <button class="btn btn-danger" (click)="add() ;clickadd=false"  >Add</button>
        </div>
        
    </div>
