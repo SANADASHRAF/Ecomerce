@@ -53,12 +53,21 @@ export class CartComponent implements OnInit {
   }
   detectchange()
   {
+    this.gettotalprice()
     localStorage.setItem("cart",JSON.stringify(this.cartproducts))
   }
 
   //delete product
   deleteProduct(index:any){
     this.cartproducts.splice(index,1)
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+  }
+
+  //clear all cart data
+  clearcartproduct()
+  {
+    this.cartproducts=[]
+    this.gettotalprice()
     localStorage.setItem("cart",JSON.stringify(this.cartproducts))
   }
 }
