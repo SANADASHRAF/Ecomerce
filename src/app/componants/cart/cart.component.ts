@@ -34,4 +34,19 @@ export class CartComponent implements OnInit {
    this.totalprice+=this.cartproducts[x].item.price*this.cartproducts[x].quantity
    }
   }
+
+
+
+  plusAmountAupdate(index:any){
+    this.cartproducts[index].quantity++
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+    this.gettotalprice()
+  }
+
+  minesAmountAupdate(index:any)
+  {
+    this.cartproducts[index].quantity--
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+    this.gettotalprice()
+  }
 }
