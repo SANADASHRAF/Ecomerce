@@ -39,14 +39,21 @@ export class CartComponent implements OnInit {
 
   plusAmountAupdate(index:any){
     this.cartproducts[index].quantity++
-    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
     this.gettotalprice()
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+   
   }
 
   minesAmountAupdate(index:any)
   {
     this.cartproducts[index].quantity--
-    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
     this.gettotalprice()
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+    
+  }
+
+  detectchange()
+  {
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
   }
 }

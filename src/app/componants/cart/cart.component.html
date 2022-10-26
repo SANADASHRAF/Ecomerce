@@ -24,7 +24,7 @@
                 <td>
                     <div class="quantity">
                         <button class="btn btn-dark" (click)="plusAmountAupdate(index)">+</button>
-                        <input class="form-control"  type="number" [(ngModel)]="item.quantity"  min="1">
+                        <input class="form-control"  type="number" [(ngModel)]="item.quantity" (change)="detectchange()"  min="1">
                         <button class="btn btn-dark" (click)="minesAmountAupdate(index)" >-</button>
                     </div>
                 </td>
