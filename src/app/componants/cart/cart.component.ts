@@ -36,7 +36,7 @@ export class CartComponent implements OnInit {
   }
 
 
-
+//amount of product 
   plusAmountAupdate(index:any){
     this.cartproducts[index].quantity++
     this.gettotalprice()
@@ -51,9 +51,14 @@ export class CartComponent implements OnInit {
     localStorage.setItem("cart",JSON.stringify(this.cartproducts))
     
   }
-
   detectchange()
   {
+    localStorage.setItem("cart",JSON.stringify(this.cartproducts))
+  }
+
+  //delete product
+  deleteProduct(index:any){
+    this.cartproducts.splice(index,1)
     localStorage.setItem("cart",JSON.stringify(this.cartproducts))
   }
 }
