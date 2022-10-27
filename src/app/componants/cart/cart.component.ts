@@ -70,4 +70,9 @@ export class CartComponent implements OnInit {
     this.gettotalprice()
     localStorage.setItem("cart",JSON.stringify(this.cartproducts))
   }
+
+  // send order to api  and service (not finish yet)
+
+
+  
 }
