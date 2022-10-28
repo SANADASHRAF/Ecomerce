@@ -22,6 +22,7 @@ import { SpinnerComponent } from './componants/spinner/spinner.component';
 import { SelectlistComponent } from './componants/selectlist/selectlist.component';
 import { ProductComponent } from './componants/product/product.component';
 import { ProductDetailsComponent } from './componants/product-details/product-details.component';
+import { AdminCartComponent } from './componants/admin-cart/admin-cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { ProductDetailsComponent } from './componants/product-details/product-de
     SelectlistComponent,
     ProductComponent,
     ProductDetailsComponent,
+    AdminCartComponent,
     
   ],
   imports: [

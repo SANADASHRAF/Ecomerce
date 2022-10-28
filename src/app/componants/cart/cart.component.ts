@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/servisee/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,7 +10,7 @@ export class CartComponent implements OnInit {
 
   cartproducts:any[]=[]
   totalprice:any=0
-  constructor() { }
+  constructor(private service:CartService) { }
 
   ngOnInit(): void {
     this.getcartproduct()
@@ -72,7 +73,24 @@ export class CartComponent implements OnInit {
   }
 
   // send order to api  and service (not finish yet)
+  // addcarrt(){
+  //   let products=this.cartproducts.map(item=>{
+  //     return (productId:item.item.id ,quantity:item.quantity)
+  //   } )
 
+  //   let model={
+  //     userId:5,
+  //     date:new Date(),
+  //     products:products
+  //   }
+
+  //   this.service.addorder(model).subscribe(
+  //     (res:any)=>{alert('addee successfully')},
+      
+  //   )
+
+
+  // }
 
   
 }
