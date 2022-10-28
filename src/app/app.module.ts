@@ -10,7 +10,7 @@ import { CartComponent } from './componants/cart/cart.component';
 import { NotFoundComponent } from './componants/not-found/not-found.component';
 import { SignupComponent } from './componants/signup/signup.component';
 
-import { AcountComponent } from './componants/acount/acount.component';
+
 import { GoodsComponent } from './componants/goods/goods.component';
 import { FormsModule } from '@angular/forms'; 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -23,6 +23,7 @@ import { SelectlistComponent } from './componants/selectlist/selectlist.componen
 import { ProductComponent } from './componants/product/product.component';
 import { ProductDetailsComponent } from './componants/product-details/product-details.component';
 import { AdminCartComponent } from './componants/admin-cart/admin-cart.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,6 @@ import { AdminCartComponent } from './componants/admin-cart/admin-cart.component
     NotFoundComponent,
     SignupComponent,
     NavbarComponent,
-    AcountComponent,
     GoodsComponent,
     SpinnerComponent,
     SelectlistComponent,

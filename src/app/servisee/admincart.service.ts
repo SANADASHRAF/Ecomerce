@@ -11,4 +11,9 @@ export class AdmincartService {
   getallcaets(){
     return this.http.get(environment.baseAPI +'carts')
   }
+
+  deletecartproduct(id:any)
+  {
+    return this.http.delete(environment.baseAPI +'carts/' +id)
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AdmincartService } from 'src/app/servisee/admincart.service';
 
 @Component({
@@ -11,8 +11,10 @@ export class AdminCartComponent implements OnInit {
 
   constructor(private service:AdmincartService) { }
   carts:any[]=[];
+  @Input() data:any={};
 
   ngOnInit(): void {
+    
     this.getallcart()
   }
 
@@ -22,4 +24,12 @@ export class AdminCartComponent implements OnInit {
     })
   }
 
+
+  deletecart(id:any)
+  {
+    this.service.deletecartproduct(id).subscribe((res:any)=>{
+      this.getallcart()
+      alert('item deleted success')
+    })
+  }
 }
