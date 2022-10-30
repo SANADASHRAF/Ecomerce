@@ -25,4 +25,8 @@ export class ProductService {
   getproductbyid(id:any){
     return this.http.get(environment.baseAPI +'products/'+id)
   }
+
+
+
+  
 }
