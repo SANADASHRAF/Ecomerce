@@ -5,9 +5,17 @@
     .card
     {
         margin-bottom: 10px;
+        height: 600px;
     }
     
     .cat{
         margin-bottom: 5px;
     }
-    
+    .c{
+        margin-left: 100px;
+       
+    }
+    .titel
+    {
+        margin-bottom: 30px;
+    }
