@@ -10,6 +10,7 @@ export class CartComponent implements OnInit {
 
   cartproducts:any[]=[]
   totalprice:any=0
+  success:boolean = false
   constructor(private service:CartService) { }
 
   ngOnInit(): void {
@@ -73,24 +74,23 @@ export class CartComponent implements OnInit {
   }
 
   // send order to api  and service (not finish yet)
-  // addcarrt(){
-  //   let products=this.cartproducts.map(item=>{
-  //     return (productId:item.item.id ,quantity:item.quantity)
-  //   } )
-
-  //   let model={
-  //     userId:5,
-  //     date:new Date(),
-  //     products:products
-  //   }
-
-  //   this.service.addorder(model).subscribe(
-  //     (res:any)=>{alert('addee successfully')},
-      
-  //   )
-
-
-  // }
-
+  addCart() {
+    //(map) بطلع ارى جديدة بعد مخلص اللى انا عايز اعملة 
+    let products = this.cartproducts.map(item => {
+     return {productId:item.item.id , quantity:item.quantity}
+    })
+ 
+     let Model = {
+       userId:5,
+       date: new Date(),
+       products:products
+     }
+ 
+     this.service.createNewCart(Model).subscribe(res => {
+       this.success = true
+     })
+ 
+     console.log(Model)
+   }
   
 }

@@ -15,4 +15,8 @@ export class CartService {
   {
     this.http.post(environment.baseAPI +'carts',model)
   }
+
+  createNewCart(model:any) {
+    return this.http.post(environment.baseAPI + 'carts' , model )
+  }
 }

@@ -41,10 +41,10 @@
                 <th></th>
                 <th></th>
                 <th>Total :{{totalprice}} LE</th>
-                <th><button class="btn btn-success" >Order Now</button></th>
+                <th><button class="btn btn-success" (click)="addCart()" >Order Now</button></th>
             </tr>
         </tfoot>
     </table>
     
 </div>
-<div class="alert alert-success" role="alert" ><strong>Well done!</strong> Your Order is Successfully Send</div>
+<div class="alert alert-success" role="alert" *ngIf="success" ><strong>Well done!</strong> Your Order is Successfully Send</div>
