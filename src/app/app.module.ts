@@ -21,8 +21,6 @@ import { SpinnerComponent } from './componants/spinner/spinner.component';
 import { SelectlistComponent } from './componants/selectlist/selectlist.component';
 import { ProductComponent } from './componants/product/product.component';
 import { ProductDetailsComponent } from './componants/product-details/product-details.component';
-import { AdminCartComponent } from './componants/admin-cart/admin-cart.component';
-import { AddProductsComponent } from './componants/add-products/add-products.component';
 
 
 @NgModule({
@@ -40,9 +38,7 @@ import { AddProductsComponent } from './componants/add-products/add-products.com
     SelectlistComponent,
     ProductComponent,
     ProductDetailsComponent,
-    AdminCartComponent,
-    AddProductsComponent,
-
+    
   ],
   imports: [
     BrowserModule,
