@@ -1,5 +1,7 @@
 # Ecomerce
 
+call data from API ,user can add to cart ,filter products by categories , control the amount of the product that order and delete it , order shopping cart products and clear it ,using(angular,CSS,HTML,bootstrap,API)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
 ## Development server
